@@ -2,10 +2,13 @@ import React from "react";
 import aboutImg from "../assets/images/about.png";
 const About = () => {
   const info = [
-    { text: "Years experience", count: "04" },
-    { text: "Completed Projects", count: "24" },
-    { text: "Companies Work", count: "06" },
+    { text: "Years experience", count: "01" },
+    { text: "Companies Intern", count: "04" },
   ];
+  const handleCVMeClick = () => {
+    window.location.href =
+      "https://drive.google.com/file/d/1mgfLjpxJSJSwetLRTS8IwMXKkAIbLOMQ/view?usp=sharing"
+  };
   return (
     <section id="about" className="py-10 text-white">
       <div className="text-center mt-8">
@@ -15,12 +18,19 @@ const About = () => {
         <p className="text-gray-400 my-3 text-lg">My introduction</p>
         <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
           <div className="p-2">
-            <div className="text-gray-300 my-3">
+            <div
+              className="text-gray-300 my-3"
+              data-aos="fade-right"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="3000"
+            >
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                ratione quibusdam doloribus pariatur consequuntur sint.
-                Reprehenderit cupiditate possimus facere quasi voluptatem?
+                As a Bachelor of Information Systems graduate who has a strong
+                commitment to development and management product. Have work
+                experience in the field of programming, so have proficiency in
+                operating Trello, Agile Methodology, Github, Visual Studio Code,
+                Figma, and Android Studio.
+
               </p>
               <div className="flex mt-10 items-center gap-7">
                 {info.map((content) => (
@@ -35,13 +45,17 @@ const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/Code_a_program.pdf" download>
-                <button className="btn-primary">Download CV</button>
-              </a>
+              <button className="btn-primary mt-8" onClick={handleCVMeClick}>
+                Download CV
+              </button>
             </div>
           </div>
-          <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
-            <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg ">
+          <div className="flex-1 md:mt-0 mt-5 flex justify-center items-center">
+            <div
+              className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg "
+              data-aos="flip-down"
+              data-aos-duration="3000"
+            >
               <img
                 src={aboutImg}
                 alt=""

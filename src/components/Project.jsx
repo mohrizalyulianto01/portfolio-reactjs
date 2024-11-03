@@ -1,11 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import project1 from "../assets/images/project-1.png";
-import project2 from "../assets/images/project-2.jpg";
-import project3 from "../assets/images/project-3.jpg";
-import project4 from "../assets/images/project-4.jpg";
+import project2 from "../assets/images/project-2.png";
+import project3 from "../assets/images/project-3.png";
+import project4 from "../assets/images/project-4.png";
 import project5 from "../assets/images/project-5.png";
-import project_person from "../assets/images/project_person1.png";
+import project6 from "../assets/images/project-6.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
@@ -14,34 +14,33 @@ const Project = () => {
   const projects = [
     {
       img: project1,
-      name: "Movie App",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://myreactflix.netlify.app",
+      name: "SIBESI",
+      live_link: "https://apps.sibesimaximum.id/index.html#",
+    },
+    {
+      img: project5,
+      name: "Meubel Store",
+      live_link: "https://meubel-stroe-m1684cgrb-rizal-yuliantos-projects.vercel.app/",
+    },
+    {
+      img: project6,
+      name: "Rentaway Points",
+      live_link: "https://rent-house-cyan.vercel.app/",
     },
     {
       img: project2,
-      name: "Job search Web App",
-      github_link: "https://github.com/Sridhar-C-25/jobsearchapp",
+      name: "Amanda App",
       live_link: "https://myjobsearch.netlify.app",
     },
     {
       img: project3,
-      name: "Highking",
-      github_link: "https://github.com/Sridhar-C-25/highking",
+      name: "BinaMurid APP",
       live_link: "https://highking01.netlify.app",
     },
     {
       img: project4,
-      name: "React Nav",
-      github_link:
-        "https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown",
-      live_link: "https://reacttailwindnavbar.netlify.app",
-    },
-    {
-      img: project5,
-      name: "Vue Country",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://vuecountry05.netlify.app",
+      name: "SIM MAGANG",
+      live_link: "https://humped-environment.000webhostapp.com/admin#",
     },
   ];
   return (
@@ -53,8 +52,8 @@ const Project = () => {
         <p className="text-gray-400 mt-3 text-lg">My awesome works</p>
       </div>
       <br />
-      <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative">
-        <div className="lg:w-2/3 w-full">
+      <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative" data-aos="zoom-in" data-aos-duration="3000">
+        <div className="lg:w-3/3 w-full">
           <Swiper
             slidesPerview={1.2}
             spaceBetween={20}
@@ -65,7 +64,7 @@ const Project = () => {
             }}
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 1000,
             }}
             pagination={{
               clickable: true,
@@ -78,13 +77,13 @@ const Project = () => {
                   <img src={project_info.img} alt="" className="rounded-lg" />
                   <h3 className="text-xl my-4">{project_info.name}</h3>
                   <div className="flex gap-3">
-                    <a
+                    {/* <a
                       href={project_info.github_link}
                       target="_blank"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
                     >
                       Github
-                    </a>
+                    </a> */}
                     <a
                       href={project_info.live_link}
                       target="_blank"
@@ -98,9 +97,9 @@ const Project = () => {
             ))}
           </Swiper>
         </div>
-        <div className="lg:block hidden">
+        {/* <div className="lg:block hidden">
           <img src={project_person} alt="" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

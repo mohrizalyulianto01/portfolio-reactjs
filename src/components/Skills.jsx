@@ -4,28 +4,33 @@ const Skills = () => {
   const skills = [
     {
       logo: "logo-html5",
-      level: "Advance",
-      count: 86,
+      level: "Expert",
+      count: 100,
     },
     {
       logo: "logo-css3",
-      level: "Expect",
-      count: 90,
+      level: "Intermediate",
+      count: 80,
     },
     {
-      logo: "logo-nodejs",
+      logo: "logo-javascript",
       level: "Beginner",
       count: 40,
     },
     {
       logo: "logo-react",
-      level: "Intermediate",
-      count: 80,
+      level: "Beginner",
+      count: 40,
+    },
+    {
+      logo: "logo-vue",
+      level: "Beginner",
+      count: 40,
     },
   ];
   return (
     <section id="skills" className="py-10 bg-gray-800 relative">
-      <div className="mt-8 text-gray-100 text-center">
+      <div className="mt-8 text-gray-100 text-center" data-aos="zoom-out-down" data-aos-duration="300">
         <h3 className="text-4xl font-semibold">
           My <span className="text-cyan-600">Skills</span>
         </h3>
